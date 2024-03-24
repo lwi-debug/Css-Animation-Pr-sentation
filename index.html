@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations CSS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Animations CSS</h1>
+    <nav>
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#fondamentaux">Fondamentaux</a></li>
+            <li><a href="#techniques-avancees">Techniques avancées</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="intro">
+        <h2>Introduction</h2>
+        <div class="intro-container">
+            <div class="intro-text">
+                <p>Qu'est-ce que CSS ? Pourquoi utiliser CSS pour les animations ?</p>
+                <p class="response">CSS permet de créer des designs web visuellement attrayants avec moins de code et une meilleure performance que JavaScript pour les animations. Cela simplifie le développement et améliore l'expérience utilisateur.</p>
+            </div>
+            <div class="intro-image">
+                <img src="ressources/CSS3_logo_and_wordmark.svg.png" alt="" class="pulsing-image">
+            </div>
+        </div>
+    </section>
+    
+    <section id="fondamentaux">
+        <h2>Fondamentaux des animations CSS</h2>
+        <div class="intro-text">
+            <p>Transitions CSS</p>
+            <p class="response2">La syntaxe de base pour une transition CSS se compose de deux parties principales : la propriété que vous souhaitez animer et la durée de cette animation. Par exemple,<br>
+                `transition: background-color 0.5s;`
+               </p>
+        </div>
+        <div class="demo-container">
+            <p>- Changer la couleur :<pre><code> .color-change:hover {
+                background-color: #9EC8B9;}</code></pre> 
+            </p>
+            <button class="demo-button color-change">Hover Me!</button>
+        </div>
+        <div class="demo-container">
+            <p>- Changer la taille :<pre><code> .size-change:hover {
+                transform: scale(1.1);}</code></pre>
+            </p>
+            <button class="demo-button size-change">Hover Me!</button>
+        </div>
+        <div class="demo-container">
+            <p>- Rotation :<pre><code> .rotate:hover {
+                transform: rotate(45deg); 
+            }</code></pre></p>
+            <button class="demo-button rotate">Hover Me!</button>
+        </div>
+        <div class="demo-container-keyframe">
+            <div class="intro-text">
+                <p>Animations avec keyframes</p>
+                <p class="response2">Les keyframes en CSS permettent de contrôler les étapes intermédiaires d'une animation, offrant une méthode pour définir précisément comment les propriétés CSS d'un élément changent au fil du temps.</p>
+                <p class="response2"><pre><code>@keyframes moveRightToLeft {
+                    0% {
+                      transform: translateX(-10);
+                    }
+                    25% {
+                      transform: translateX(40px); /* Se déplace à droite */
+                    }
+                    75% {
+                      transform: translateX(-100px); /* Se déplace à gauche */
+                    }
+                    100% {
+                      transform: translateX(-10); /* Revient au centre */
+                    }
+                  }</code></pre></p>
+            </div>
+            <button class="demo-button2">Pulse Me!</button>
+        </div>
+    </section>
+    
+    
+    <section id="techniques-avancees">
+        <h2>Techniques avancées</h2>
+        
+        <div class="advanced-section">
+            <h3>1. Contrôle des animations</h3>
+            <p><strong>Animation-delay et animation-direction</strong>: Déterminez quand votre animation commence avec <code>animation-delay</code>, et contrôlez son déroulement avec <code>animation-direction</code>.</p>
+            <p><strong>Animation-fill-mode et animation-play-state</strong>: Choisissez comment votre animation applique ses styles au début et à la fin avec <code>animation-fill-mode</code>, et mettez-la en pause ou jouez-la avec <code>animation-play-state</code>.</p>
+        </div>
+        
+        <div class="advanced-section">
+            <h3>2. Timing functions</h3>
+            <p><strong>Fonctions linéaires vs. easing</strong>: Les animations linéaires changent à une vitesse constante, tandis que les fonctions d'easing créent un mouvement plus naturel en accélérant ou en ralentissant.</p>
+            <p><strong>Utilisation de cubic-bezier</strong>: Avec <code>cubic-bezier</code>, personnalisez précisément la vitesse de votre animation pour un contrôle créatif complet.</p>
+        </div>
+        
+        <div class="advanced-section">
+            <h3>3. Performances des animations CSS</h3>
+            <p><strong>Optimisation des animations</strong>: Utilisation des propriétés comme <code>transform</code> et <code>opacity</code> pour des animations fluides qui n'exigent pas de recalculs coûteux du layout (reflow) ou du rendu (repaint).</p>
+        </div>
+    </section>
+    <section id="animation-extraordinaire">
+        <h2>Exemple d'animation avancées</h2>
+        <div class="animation-container">
+            <div class="circle circle1"></div>
+            <div class="circle circle2"></div>
+            <div class="circle circle3"></div>
+            <div class="circle circle4"></div>
+        </div>
+    </section>
+</body>
+</html>
